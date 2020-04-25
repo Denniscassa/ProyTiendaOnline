@@ -1,54 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
 
-    <title><%= title %></title>
-
-    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
-    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+  <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+  <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
 
 </head>
 
 <body>
-    <div class="container ">
-        <div class="table-responsive">
-            <table border="1" class="table table-bordered table-hover  ">
-                <div >
-                    <tr class="bg-info text-white" >
-                        <th >ID</th>
-                        <th>CODIGO</th>
-                        <th>PRODUCTO</th>
-                        <th>GENERO</th>
-                        <th>MARCA</th>
-                        <th>MODELO</th>
-                        <th>TIPO</th>
-                        <th>STOCK</th>
-                        <th>COLORES</th>
-                        <th>PRECIO</th>
-                        <th>DESCRIPCION</th>
-                    </tr>
-                </div>
-                <% for(i=0; i< datosproducto.length; i++) {%>
-                <tr>
-                    <th><%= datosproducto[i].id %></th>
-                    <th><%= datosproducto[i].codigo %></th>
-                    <th><%= datosproducto[i].producto %></th>
-                    <th><%= datosproducto[i].genero %></th>
-                    <th><%= datosproducto[i].marca %></th>
-                    <th><%= datosproducto[i].modelo %></th>
-                    <th><%= datosproducto[i].tipo %></th>
-                    <th><%= datosproducto[i].stock %></th>
-                    <th><%= datosproducto[i].colores %></th>
-                    <th><%= datosproducto[i].precio %></th>
-                    <th><%= datosproducto[i].descripcion %></th>
-                </tr>
-                <%}%>
-            </table>
-        </div>
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  <div class="container ">
+    <div class="table-responsive">
+      <table border="1" class="table table-bordered table-hover  ">
+        <tr class="bg-info text-white" >
+          <th>ID</th>
+          <th>Codigo</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Dni</th>
+          <th>Correo</th>
+          <th>Telefono</th>
+          <th>Direccion</th>
+          <th>Deuda</th>
+        </tr>
+
+        <% for(i =0 ; i < datos.length; i++) { %>
+        <tr>
+          <th><%= datos[i].id_cliente%></th>
+          <th><%= datos[i].cod_cliente%></th>
+          <th><%= datos[i].nombre_cliente%></th>
+          <th><%= datos[i].apellido_cliente%></th>
+          <th><%= datos[i].dni_cliente%></th>
+          <th><%= datos[i].correo_cliente%></th>
+          <th><%= datos[i].telefono_cliente%></th>
+          <th><%= datos[i].direccion%></th>
+          <th><%= datos[i].deuda%></th>
+        </tr>
+        <% } %>
+      </table>
     </div>
+  </div>
+  
 
 </body>
 
